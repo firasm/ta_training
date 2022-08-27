@@ -1,6 +1,5 @@
 jupyter-book
 matplotlib
 numpy
-#myst-parser
 linkify
 linkify-it-py
