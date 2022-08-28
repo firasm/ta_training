@@ -10,3 +10,8 @@
 </div>
 ```
 
+Other videos to create:
+
+- Manual grading on PrairieLearn
+- Setting Assignment deadlines on PrairieLearn
+- Authoring questions PrairieLearn

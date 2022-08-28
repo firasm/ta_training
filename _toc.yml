@@ -13,6 +13,9 @@ parts:
   - file: content/tips/giving_feedback
     title: Giving Effective Feedback
 
+- caption: Communicating with Students
+  chapters:
+  - file: content/communicating/ed_discussion
 - caption: Learning Tools
   chapters:
   - file: content/tools/canvas
