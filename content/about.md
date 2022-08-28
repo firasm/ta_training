@@ -1,7 +1,5 @@
 ![](../images/header.jpg)
 
-![](../images/UBCO_CMPS_header.jpg)
-
 (page_pre_term)=
 # Before term starts
 

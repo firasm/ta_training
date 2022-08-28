@@ -16,6 +16,7 @@ parts:
 - caption: Communicating with Students
   chapters:
   - file: content/communicating/ed_discussion
+
 - caption: Learning Tools
   chapters:
   - file: content/tools/canvas
@@ -26,6 +27,8 @@ parts:
     title: Gradescope
   - file: content/tools/github
     title: GitHub
+  - file: content/tools/office
+    title: Office365
 
 - caption: Course Feedback
   chapters:
