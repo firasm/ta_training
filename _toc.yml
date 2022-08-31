@@ -19,6 +19,8 @@ parts:
 
 - caption: Learning Tools
   chapters:
+  - file: content/tools/email
+    title: UBC Email
   - file: content/tools/canvas
     title: Canvas
   - file: content/tools/prairielearn
