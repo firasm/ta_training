@@ -27,6 +27,8 @@ parts:
     title: PrairieLearn
   - file: content/tools/gradescope
     title: Gradescope
+  - file: content/tools/slido
+    title: Slido
   - file: content/tools/github
     title: GitHub
   - file: content/tools/office
