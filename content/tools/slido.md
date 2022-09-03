@@ -25,6 +25,10 @@ I will typically assign one TA to do all the questions for the whole term (if th
 If I don't have my lecture content ready in time (very likely), I will likely just do that week's slido question myself in a last minute scramble/panic.
 Note that depending on how the class goes, not all questions will be presented to students live - some will be assigned as extra practice questions for home.
 
+```tip
+The instructor will usually give you a "Share Link" that will allow you to edit the Slido event (usually one event per course) to add the polls.
+```
+
 ## Task: Managing Slido during class
 
 Here's the typical way I will use Sli.do in class, on one side is the Slido screen where questions are displayed, and on the other side are the day's slides.
