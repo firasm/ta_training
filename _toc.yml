@@ -6,6 +6,10 @@ parts:
   - file: content/about
   - file: content/faq
 
+- caption: Training
+  chapters:
+  - file: content/training1
+
 - caption: Teaching tips
   chapters:
   - file: content/tips/class_management
