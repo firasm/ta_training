@@ -16,6 +16,8 @@ parts:
     title: Class Management
   - file: content/tips/giving_feedback
     title: Giving Effective Feedback
+  - file: content/tips/submitting_assignment_PL
+    title: Submitting assignments in PL
 
 - caption: Communicating with Students
   chapters:
