@@ -52,7 +52,11 @@ docker run -it --rm -p 3000:3000 prairielearn/prairielearn
 ```
 
 Your Terminal will be occupied and while it's launching, the message in the Terminal will say "Starting PrairieLearn...".
-Once it's launched, a message will print in the Terminal that says "info: Go to http://localhost:3000" ; visit that webpage in a new browser.
+Once it's launched, a message will print in the Terminal that says:
+
+> info: Go to http://localhost:3000" ; 
+
+visit that webpage in a new browser.
 Your Terminal will still be occupied and you should keep it running.
 To interrupt and stop the container, press `Ctrl + C` in the Terminal (you may have to do this several times).
 
@@ -81,6 +85,13 @@ Here is what the Assessments will look like.
 
 For more details about the example course and how to author your own questions, [see this section here](https://prairielearn.readthedocs.io/en/latest/getStarted/).
 
+Once you're done exploring, stop the Docker Container (using Ctrl+C in the Terminal)
+
+## Step 6: Fork the IND 100 sample PrairieLearn course
+
+If you haven't already done this, follow the [steps outlined here](opb_course_repo).
+
+<!-- 
 ## Step 6: Request your own course on PrairieLearn
 
 Once you're ready to develop questions for your own course, you should first request a course through the appropriate PrairieLearn instance:
@@ -88,6 +99,7 @@ Once you're ready to develop questions for your own course, you should first req
 <img src="pl_images/pl_request_course.png">
 
 Once you have a PrairieLearn course, you should clone it locally, and then add it to your local Docker container (see next step).
+ -->
 
 ## Step 7: Add your own course to the local PrairieLearn instance
 
@@ -98,13 +110,32 @@ In the command below, replace `local_path` with the path to where your course re
 docker run -it --rm -p 3000:3000 -v local_path:/course prairielearn/prairielearn
 ```
 
+```{tip}
+For staff working on the Open Problem Bank, your `local_path` should be the absolute path wherever you cloned the IND 100 (`pl-opb-ind100`) and the `instructor_physics_bank` repositories.
+```
+
+```{tip}
 If you are using Docker for Windows then you will need to first give Docker permission to access the `C:` drive (or whichever drive your course directory is cloned in).
 This can be done by right-clicking on the Docker "whale" icon in the taskbar, choosing "Settings", and granting shared access to the `C:` drive.
+```
 
 To use multiple courses, add additional `-v` flags (e.g., -v /path/to/course:/course -v /path/to/course2:course2). There are nine available mount points in the Docker: `/course`, `/course2`, `/course3`, ..., `/course9`.
 
 If you're in the root of your course directory already, you can substitute `%cd%` (on Windows) or `$PWD` (Linux and MacOS) for `/path/to/course`.
 
+<!-- 
 If you plan on running externally graded questions in local development, please see [this section](https://prairielearn.readthedocs.io/en/latest/externalGrading/#running-locally-on-docker) for a slightly different docker launch command.
 
 **NOTE**: On MacOS with "Apple Silicon" (ARM64) hardware, the use of R is not currently supported.
+ -->
+
+## Step 8: Install the OPB conversion script
+
+
+
+## Step 9: Test that questions created within the `instructor_physics_bank` are sent to IND 100
+
+```{warning}
+Before you attempt this step, you need to first 
+
+Open a Terminal, and navigate to a `

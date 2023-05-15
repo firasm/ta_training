@@ -1,4 +1,6 @@
-# TA Training (Friday Sept 9 11-1:30 PM)
+# TA Training 
+
+This is the outline of the TA training on Friday Sept 9, 2022 11-1:30 PM.
 
 ## Introductions
 
