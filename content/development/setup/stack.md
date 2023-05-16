@@ -1,5 +1,5 @@
-(page_install_ds_stack)=
-Data Science Tech Stack
+(page_install_opb_stack)=
+Open Problem Bank Tech Stack
 =======================
 
 To do data analyses, we will use several tools and software packages in this course.

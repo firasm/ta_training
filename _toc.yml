@@ -19,12 +19,6 @@ parts:
   - file: content/tips/submitting_assignment_PL
     title: Submitting assignments in PL
 
-- caption: Training for Question Bank
-  chapters:
-  - file: content/development/overview
-  - file: content/development/setup/opb_course_repo
-  - file: content/development/setup/docker_course_dev
-
 - caption: Communicating with Students
   chapters:
   - file: content/communicating/ed_discussion

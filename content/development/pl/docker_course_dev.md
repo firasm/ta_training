@@ -1,6 +1,8 @@
 # PrairieLearn Course Development on Docker
 
-This page describes the procedure to install and run your course locally within Docker. You can develop course content locally following the instructions below, or using the in-browser tools.
+This page describes the procedure to install and run your course locally within Docker.
+The steps listed below **only need to be done once**, once you've got things setup correctly, you should refer to the [Question Development](../questions/opb_questions) page for subsequent questions.
+
 
 ## Step 1: Download and Install Docker Desktop.
 
@@ -136,7 +138,8 @@ If you are using Docker for Windows then you will need to first give Docker perm
 This can be done by right-clicking on the Docker "whale" icon in the taskbar, choosing "Settings", and granting shared access to the `C:` drive.
 ```
 
-To use multiple courses, add additional `-v` flags (e.g., -v /path/to/course:/course -v /path/to/course2:course2). There are nine available mount points in the Docker: `/course`, `/course2`, `/course3`, ..., `/course9`.
+To use multiple courses, add additional `-v` flags (e.g., -v /path/to/course:/course -v /path/to/course2:course2).
+There are nine available mount points in the Docker: `/course`, `/course2`, `/course3`, `...`, `/course9`.
 
 If you're in the root of your course directory already, you can substitute `%cd%` (on Windows) or `$PWD` (Linux and MacOS) for `/path/to/course`.
 
@@ -163,3 +166,12 @@ python checkq.py ../source/001.Math/Algebra/Smudge/Smudge.md ../../pl-opb-ind100
 - Open the local instance of PrairieLearn in your browser (http://localhost:3000).
 - Click "Load from Disk".
 - Verify the question works as expected on PrairieLearn in the browser.
+
+```{important}
+When developing locally on PrairieLearn, you **must** click "Load from Disk" every time you make a change in your `questions` directory!
+
+<img src="pl_images/pl_load_from_disk.png">
+```
+
+That's it!
+You're ready to develop questions for the OPB!
