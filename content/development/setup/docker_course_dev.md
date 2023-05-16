@@ -54,7 +54,7 @@ docker run -it --rm -p 3000:3000 prairielearn/prairielearn
 Your Terminal will be occupied and while it's launching, the message in the Terminal will say "Starting PrairieLearn...".
 Once it's launched, a message will print in the Terminal that says:
 
-> info: Go to http://localhost:3000" ; 
+> info: Go to http://localhost:3000; 
 
 visit that webpage in a new browser.
 Your Terminal will still be occupied and you should keep it running.
@@ -85,9 +85,20 @@ Here is what the Assessments will look like.
 
 For more details about the example course and how to author your own questions, [see this section here](https://prairielearn.readthedocs.io/en/latest/getStarted/).
 
-Once you're done exploring, stop the Docker Container (using Ctrl+C in the Terminal)
+## Step 6: Stop the Docker Container
 
-## Step 6: Fork the IND 100 sample PrairieLearn course
+Once you're done exploring, stop the Docker Container (using `Ctrl+C` in the Terminal).
+Another way to stop the Docker container is to open Docker Desktop and press the stop (⏹️) button.
+
+<img src="pl_images/docker_stop.png">
+
+```{tip}
+This step is sometimes a bit finicky - your Terminal may stop responding when trying to stop the Container using `Ctrl+C`.
+If that happens, don't close the Terminal, and use the Docker Desktop to stop the container.
+
+```
+
+## Step 7: Fork the IND 100 sample PrairieLearn course
 
 If you haven't already done this, follow the [steps outlined here](opb_course_repo).
 
@@ -101,7 +112,7 @@ Once you're ready to develop questions for your own course, you should first req
 Once you have a PrairieLearn course, you should clone it locally, and then add it to your local Docker container (see next step).
  -->
 
-## Step 7: Add your own course to the local PrairieLearn instance
+## Step 8: Add your own course to the local PrairieLearn instance
 
 To use your own course, bind the Docker `/course` directory with your own course repo directory using the `-v` flag.
 In the command below, replace `local_path` with the path to where your course repo is cloned locally:
@@ -110,9 +121,15 @@ In the command below, replace `local_path` with the path to where your course re
 docker run -it --rm -p 3000:3000 -v local_path:/course prairielearn/prairielearn
 ```
 
-```{tip}
-For staff working on the Open Problem Bank, your `local_path` should be the absolute path wherever you cloned the IND 100 (`pl-opb-ind100`) and the `instructor_physics_bank` repositories.
+````{tip}
+For staff working on the Open Problem Bank, your `local_path` should be the **absolute path** wherever you cloned the IND 100 (`pl-opb-ind100`) and the `instructor_physics_bank` repositories.
+
+For example, the exact command for me is:
+
 ```
+docker run -it --rm -p 3000:3000 -v ~/Sync/EL/code\ contributions/course_dev/pl-opb-ind100 :/course prairielearn/prairielearn 
+```
+````
 
 ```{tip}
 If you are using Docker for Windows then you will need to first give Docker permission to access the `C:` drive (or whichever drive your course directory is cloned in).
@@ -129,13 +146,20 @@ If you plan on running externally graded questions in local development, please 
 **NOTE**: On MacOS with "Apple Silicon" (ARM64) hardware, the use of R is not currently supported.
  -->
 
-## Step 8: Install the OPB conversion script
+## Step 9: Run the script to move a question from the `instructor_physics_bank` to IND 100
 
+Since we are writing questions for the OPB using MyST Markdown, there is an extra processing step to convert the `.md` file to the PrairieLearn format (`.html`, `.json`, and `.py` files).
+This processing step is somewhat automated using GitHub Actions, but it's often helpful to do the processing locally since it takes much less time and is more efficient when troubleshooting.
+Here are the steps to run the processing step on an `.md` question to create `.html`, `.json`, and `.py` files, and then move them over to the IND 100 and see how the question looks.
 
+- Open a Terminal on your local machine, and change directory to where the `instructor_physics_bank` is cloned.
+- `cd` into the `scripts` directory.
+- Run the script on a particular question: 
 
-## Step 9: Test that questions created within the `instructor_physics_bank` are sent to IND 100
+```
+python checkq.py ../source/001.Math/Algebra/Smudge/Smudge.md ../../pl-opb-ind100/questions/FM
+```
 
-```{warning}
-Before you attempt this step, you need to first 
-
-Open a Terminal, and navigate to a `
+- Open the local instance of PrairieLearn in your browser (http://localhost:3000).
+- Click "Load from Disk".
+- Verify the question works as expected on PrairieLearn in the browser.
